@@ -73,3 +73,43 @@ console.log("Lista de dicionários: ");
 console.log(frutas_lista);
 //consulta
 console.log(frutas_lista[1].cor);
+
+
+//---- Condicionais
+var idade = prompt("Digite sua idade novamente pra mim ver um negócio: ");
+
+if(idade >= 18){
+    alert("Você é maior de idade!");
+}else{
+    alert("Você é menor de idade!");
+};
+
+
+// Laço de repetição
+
+
+// while
+var count = 0;
+
+console.log(count);
+while(count < 10){
+    count++;
+
+    console.log(count);
+};
+
+//for - pesquise na net a diferença entre os dois.
+
+//var tabuada = prompt("Insira o número que você queira a tabuada ");
+console.log("Usando o for: ");
+
+
+for(numero = 20; numero > 5; numero--){console.log(numero);};
+
+
+// Date
+
+var d = new Date();
+
+alert(d);
+console.log("Hoje é " + d.getDate() + "/" + (d.getMonth()+1));
