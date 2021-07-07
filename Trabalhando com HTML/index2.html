@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang ="pt-br">
+
+    <head>
+        <title>Manipulando elementos da página</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="main2.js"></script>
+    </head>
+
+    <body onload="carregando()">
+        <button type="button" onclick="botao_alert()">Clica ae pra dar um alerta</button>
+        <button type="button" onclick="botao_element()">Clica pra uma surpresa</button>
+        <h3 id="surpresa" onclick="redirecionar()"></h3>
+
+
+        <p id="mouse" onmouseover="mousedentro(this)" onmouseout="mousefora(this)">Passe o mouse aqui.</p>
+        <p id="mouse" onmouseover="mousedentro(this)" onmouseout="mousefora(this)">Passe o mouse aqui.</p>
+
+        <!-- Note que não é necessário ID para a função, usa-se apenas o "this" -->
+        <p onmouseover="mousedentro(this)" onmouseout="mousefora(this)">Passe o mouse aqui.</p>
+        
+        <footer>
+            <select onchange="trocar_select(this)">
+                <option value="1">Valor 1</option>
+                <option value="2">Valor 2</option>
+                <option value="3">Valor 3</option>
+            </select>
+        </footer>
+    </body>
+</html>
