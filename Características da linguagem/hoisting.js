@@ -15,6 +15,7 @@ fn();
 // Hoisting de função
 executeiaqui();
 
+// mas declarei aqui
 function executeiaqui(){
     console.log("\nHoisting de função!")
 }

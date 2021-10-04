@@ -104,7 +104,7 @@ while(count < 10){
 console.log("Usando o for: ");
 
 
-for(numero = 20; numero > 5; numero--){console.log(numero);};
+for(let numero = 20; numero > 5; numero--){console.log(numero);};
 
 
 // Date

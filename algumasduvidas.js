@@ -8,7 +8,7 @@ console.log(var1 + var2 + 1425 + "-" + 1519);
 // Resposta: é a tipagem fraca do javascript
 
 // Não era para ir até o 6?
-for(count=0; count <= 5; count++){
+for(let count=0; count <= 5; count++){
     console.log(count);
 };
 

@@ -1,0 +1,1 @@
+// veja https://medium.com/collabcode/javascript-e-suas-vari%C3%A1veis-var-let-e-const-b035b44c2dab
