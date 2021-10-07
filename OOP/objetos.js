@@ -1,11 +1,5 @@
 // definindo objetos:
 
-//Objeto vazio:
-var pessoa = {};
-console.log(pessoa);
-
-
-
 /* sintaxe:
 var nomeDoObjeto = {
   nomeMembro1: valorMembro1,
@@ -16,7 +10,14 @@ var nomeDoObjeto = {
 dá para colocar funções, strings e outros dentro de um único objeto. Dá para colocar quase tudo. Até mesmo outros objetos. */
 
 
-// Atribuindo valores ao objeto:
+//Objeto vazio:
+var pessoa = {};
+console.log(pessoa);
+// saída: {}
+
+
+
+// <----------> Atribuindo valores ao objeto: <---------->
 var pessoa = {
     nome: ["Bob", "Smith"],
     idade: 32,
@@ -32,7 +33,7 @@ var pessoa = {
     }
 };
 
-/*
+/* Nota:
 Esse tipo de objeto ^ é chamado de objeto literal.
 
 É muito comum criar um objeto usando um objeto literal quando você deseja transferir uma série de itens de dados relacionados 
@@ -51,7 +52,7 @@ métodos do objeto -> Funções, arrays.
 */
 
 
-//Acessando valores:
+// <----------> Acessando valores: <---------->
 
 /* Esteja ciente de namespace e encapsulamento:
 
@@ -60,33 +61,63 @@ namespace.encapsulamento */
 console.log(pessoa.nome[0]); //aparecerá bob
 
 
-/* Notação de colchetes:
+/* <----------> Acessando valores com a notação de colchetes: <---------->
 
 Também há como pegar valores com a notação de colchetes: 
+*/
+const pessoa2 = {
+    nome: {primeiro: "Whatsapp", segundo: "da Silva"},
+    idade: 42
+};
+console.log(
 
-pessoa["idade"]
-pessoa["nome"]["primeiro"]
+pessoa2["idade"],
+pessoa2["nome"]["primeiro"] 
+// mesmo que:
+//pessoa2.nome.primeiro
+);
+// Saída: 42 'Whatsapp'
 
-Não há vantagens em usar essa notação ao invés da outra, mas ela pode ser útil para um input de usuário.
 
-var myDataName = nameInput.value;
-var myDataValue = nameValue.value;
+/* *** Não há vantagens em usar essa notação ao invés da outra, mas ela pode ser útil para um input de usuário.
+
+var myDataName = inputvalor1;
+var myDataValue = inputvalor2;
 
 pessoa[myDataName] = myDataValue;
+*/
 
-exemplo: 
+//exemplo do comentário acima:
 
 var myDataName = 'altura';
 var myDataValue = '1.75m';
 pessoa[myDataName] = myDataValue;
+// é o mesmo que
+//pessoa["altura"] = "1.75"
+
+console.log(pessoa.altura);
+// saída: 1.75m
 
 
-Veja mais aqui: https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Basics#setando_membros_do_objeto
+// outro exemplo do colchetes:
+function pegarprop(namespace ,prop){
+    return namespace[prop]
+}
 
-*/ 
+console.log(
+    pegarprop(pessoa, "nome")
+);
+// saída:
+// [ 'Bob', 'Smith' ]
 
 
-//alterando valores:
+
+/* Veja mais aqui: 
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Basics#setando_membros_do_objeto
+*/
+
+
+// <-------> alterando valores: <------->
 
 pessoa.nome = {
     primeiro: "Victor",
@@ -101,7 +132,7 @@ console.log(pessoa.nome); // {primeiro: "Victor", ultimo: "Vieira"}
 
 
 
-/* Criando novos valores
+/*  <-------> Criando novos valores <------->
 namespace.novo = novo valor
 */
 pessoa.olhos = "castanho";
@@ -121,3 +152,7 @@ https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Basics#o_que_%
 Leia https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Basics#voc%C3%AA_vem_usando_objetos_o_tempo_todo.
 
 */ 
+
+// <-------> Deletando uma propriedade <------->
+
+delete pessoa.nome;
